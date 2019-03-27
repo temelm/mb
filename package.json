@@ -1,7 +1,7 @@
 {
   "name": "mb",
   "version": "1.0.0",
-  "description": "",
+  "description": "@todo",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --color --hot --open --env.development",
