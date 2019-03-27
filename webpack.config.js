@@ -1,8 +1,9 @@
-const htmlWebpackPlugin = require('html-webpack-plugin')
-const miniCssExtractPlugin = require('mini-css-extract-plugin')
-const optimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const path = require('path')
-const uglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
+const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = (env) => {
   const isProdBuild = (env.production === true)
@@ -23,7 +24,7 @@ module.exports = (env) => {
           test: /\.scss$/,
           exclude: /node_modules/,
           use: [
-            (isProdBuild) ? miniCssExtractPlugin.loader : 'style-loader',
+            (isProdBuild) ? MiniCssExtractPlugin.loader : 'style-loader',
             'css-loader',
             'postcss-loader',
             'sass-loader'
@@ -37,7 +38,7 @@ module.exports = (env) => {
       ]
     },
     plugins: [
-      new htmlWebpackPlugin({
+      new HtmlWebpackPlugin({
         template: './src/index.html',
         minify: {
           collapseWhitespace: true,
@@ -46,16 +47,22 @@ module.exports = (env) => {
           removeScriptTypeAttributes: true,
           removeStyleLinkTypeAttributes: true,
           useShortDoctype: true
-        }
+        },
+        favicon: './src/images/favicon.ico'
       }),
-      new miniCssExtractPlugin({
+      new MiniCssExtractPlugin({
         filename: 'bundle.css'
-      })
+      }),
+      new CopyWebpackPlugin([{
+        from: './src/server/mail.php',
+        to: './mail.php',
+        toType: 'file'
+      }])
     ],
     optimization: {
       minimizer: [
-        new optimizeCssAssetsWebpackPlugin({}),
-        new uglifyjsWebpackPlugin({
+        new OptimizeCssAssetsWebpackPlugin({}),
+        new UglifyjsWebpackPlugin({
           parallel: true
         })
       ]
