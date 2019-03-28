@@ -1,0 +1,128 @@
+.navbar {
+  background-color: $colorMbFontDark; /* @todo */
+  bottom: 0;
+  left: 0;
+  opacity: 0.95;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  .wrapper {
+    display: flex;
+  }
+
+  a {
+    color: $colorWhite;
+    display: inline-block;
+    font-weight: 700;
+    padding: $spacingXs 0;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #ffce00; /* @todo */
+  }
+}
+
+.navbar-hamburger {
+  flex: 1;
+}
+
+.navbar-links {
+  display: none;
+  flex: 3;
+
+  ul {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: left;
+      margin-right: $spacingXs;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.navbar-links.expanded {
+  background-color: $colorMbFontDark; /* @todo */
+  bottom: $navbarHeight;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  width: 50%;
+
+  ul {
+    display: flex;
+    flex-direction: column-reverse;
+
+    li {
+      margin-right: 0;
+
+      a {
+        display: block;
+        padding-left: $spacingXs;
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+  text-align: right;
+
+  a {
+    align-items: center;
+    display: flex;
+    padding: 0;
+
+    img {
+      max-height: 32px;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpointMd) {
+  .navbar {
+    bottom: auto;
+    top: 0;
+  }
+
+  .navbar-hamburger {
+    display: none;
+  }
+
+  .navbar-links {
+    display: block;
+  }
+
+  .navbar-links.expanded {
+    display: block;
+    position: static;
+
+    ul {
+      display: block;
+
+      li {
+        margin-right: $spacingXs;
+
+        a {
+          padding-left: 0;
+        }
+      }
+
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
