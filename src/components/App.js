@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 import Welcome from './Welcome'
 import About from './About'
+import Contact from './Contact'
 
 class App extends React.Component {
   constructor (props) {
@@ -35,6 +36,7 @@ class App extends React.Component {
         />
         <Welcome />
         <About />
+        <Contact />
       </div>
     )
   }
