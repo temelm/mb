@@ -1,0 +1,27 @@
+#welcome {
+  padding-bottom: $spacingMd;
+  padding-top: $spacingMd;
+
+  h1 {
+    font-size: $spacingMd;
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+    margin-top: $spacingSm;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: $breakpointMd) {
+  #welcome {
+    margin-top: $navbarHeight;
+    padding-bottom: $spacingLg;
+    padding-top: $spacingLg;
+
+    h1 {
+      font-size: $spacingLg;
+    }
+  }
+}
