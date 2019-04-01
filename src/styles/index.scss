@@ -10,6 +10,7 @@ $spacingLg: calc(#{$spacingXs} * 4);             /* 64px */
 
 $colorMbFontDark: #333;
 $colorMbFormFieldBorder: #ccc;
+$colorMbTeal: #155d75;
 $colorWhite: #fff;
 
 $fontFamily: "Ubuntu", sans-serif;
@@ -78,4 +79,6 @@ h4 {
 @import './nav';
 @import './welcome';
 @import './about';
+@import './services';
 @import './contact';
+@import './notification'

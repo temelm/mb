@@ -1,0 +1,24 @@
+.notification {
+  color: $colorWhite;
+  font-weight: 700;
+  opacity: 0.95;
+  padding: $spacingXs 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  a {
+    color: $colorWhite;
+    font-size: small;
+  }
+}
+
+.notification-success {
+  background-color: #005636;
+}
+
+.notification-error {
+  background-color: #990000;
+}

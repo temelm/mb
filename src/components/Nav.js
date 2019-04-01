@@ -19,6 +19,9 @@ const Nav = (props) => {
               <AnchorLink href='#about' onClick={() => { setHamburgerToggle(false) }}>About</AnchorLink>
             </li>
             <li>
+              <AnchorLink href='#services' onClick={() => { setHamburgerToggle(false) }}>Services</AnchorLink>
+            </li>
+            <li>
               <AnchorLink href='#contact' onClick={() => { setHamburgerToggle(false) }}>Contact</AnchorLink>
             </li>
           </ul>
