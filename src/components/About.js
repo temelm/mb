@@ -1,7 +1,7 @@
 import React from 'react'
 
 // @todo: Review
-const p1 = [
+const paragraph1 = [
   'Mete is an ACA qualified accountant who had been contracting since 2018. He has graduated from BSc Accounting &',
   'Finance from University of Bath in 2011, and have worked in EY and Moore Stephens, before moving to contracting. As',
   'part of a team, he has provided auditing services to listed companies (IFRS), US subsidiary companies (US GAAP',
@@ -11,7 +11,7 @@ const p1 = [
   'Audit Office.'
 ].join(' ')
 // @todo: Review
-const p2 = [
+const paragraph2 = [
   'As Mete does contracting himself, he has gained experience in personal tax as well as online accounting tools.',
   'Using his experience with all sizes of firms to date, he aims to bring quality accounting, personal tax and',
   'business advice at affordable rates, using the latest available technology; focusing on contractors and small to',
@@ -22,8 +22,8 @@ const About = () => (
   <section id='about'>
     <div className='wrapper'>
       <h1>About</h1>
-      <p>{p1}</p>
-      <p>{p2}</p>
+      <p>{paragraph1}</p>
+      <p>{paragraph2}</p>
     </div>
   </section>
 )
