@@ -1,6 +1,6 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from '../images/favicon.ico'
 
 const Nav = (props) => {

@@ -1,5 +1,6 @@
 .navbar {
-  background-color: $colorMbTeal;
+  background-color: $colorWhite;
+  box-shadow: 0 -1px 0 $colorMbTealLight;
   bottom: 0;
   left: 0;
   opacity: 0.95;
@@ -12,7 +13,7 @@
   }
 
   a {
-    color: $colorWhite;
+    color: $colorMbTeal;
     display: inline-block;
     font-weight: 700;
     padding: $spacingXs 0;
@@ -20,7 +21,7 @@
   }
 
   a:hover {
-    color: #F55434;
+    transform: scale(1.1);
   }
 }
 
@@ -50,7 +51,7 @@
 }
 
 .navbar-links.expanded {
-  background-color: $colorMbTeal;
+  background-color: $colorWhite;
   bottom: $navbarHeight;
   display: flex;
   flex-direction: column-reverse;
@@ -94,6 +95,7 @@
 @media screen and (min-width: $breakpointMd) {
   .navbar {
     bottom: auto;
+    box-shadow: 0 1px 0 $colorMbTealLight;
     top: 0;
   }
 
