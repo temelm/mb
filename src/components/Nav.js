@@ -1,7 +1,7 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import logo from '../images/favicon.ico'
+import favicon from '../images/favicon.ico'
 
 const Nav = (props) => {
   const { hamburgerToggle, setHamburgerToggle, handleHamburgerToggle } = props
@@ -28,7 +28,7 @@ const Nav = (props) => {
         </div>
         <div className='navbar-brand'>
           <a href='/'>
-            <img src={logo} alt='MB Accounting &amp; Consulting Ltd' />
+            <img src={favicon} alt='MB Accounting &amp; Consulting Ltd' />
           </a>
         </div>
       </div>

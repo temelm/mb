@@ -1,9 +1,10 @@
 import React from 'react'
+import logo from '../images/logo.png'
 
 const Welcome = () => (
   <section id='welcome'>
     <div className='wrapper'>
-      <h1>Welcome to MB Accounting &amp; Consulting Ltd</h1>
+      <img src={logo} alt='MB Accounting &amp; Consulting Ltd' />
       <p>
         <q>Accounting simplified.</q>
       </p>
