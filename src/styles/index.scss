@@ -8,6 +8,7 @@ $spacingSm: calc(#{$spacingXs} * 2);             /* 32px */
 $spacingMd: calc(#{$spacingXs} + #{$spacingSm}); /* 48px */
 $spacingLg: calc(#{$spacingXs} * 4);             /* 64px */
 
+$colorMbBackgroundLight: #fffaf0;
 $colorMbFontDark: #333;
 $colorMbFormFieldBorder: #ccc;
 $colorMbTeal: #185e75;
@@ -17,6 +18,7 @@ $colorWhite: #fff;
 $fontFamily: "Ubuntu", sans-serif;
 
 body {
+  background-color: $colorMbBackgroundLight;
   color: $colorMbFontDark;
   font-family: $fontFamily;
   margin: 0;
