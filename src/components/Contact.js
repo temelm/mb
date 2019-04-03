@@ -24,7 +24,7 @@ const Contact = (props) => {
         <div className='copyright'>
           <span role='img' aria-label='Copyright'>©️</span>
           {' '}
-          2019 @todo: Mustafa Temel or Tem Consulting Limited
+          2019 MB Accounting &amp; Consulting Ltd
         </div>
       </div>
     </section>
