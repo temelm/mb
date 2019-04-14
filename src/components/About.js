@@ -24,6 +24,9 @@ const About = () => (
       <h1>About</h1>
       <p>{paragraph1}</p>
       <p>{paragraph2}</p>
+      <div className='cv'>
+        <a href='cv.pdf' target='blank'>View CV</a>
+      </div>
     </div>
   </section>
 )
