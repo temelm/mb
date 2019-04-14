@@ -1,1 +1,33 @@
-/* @todo */
+#about p {
+  margin-bottom: $spacingSm;
+}
+
+.cv {
+  text-align: center;
+  
+  a {
+    background-color: $colorWhite;
+    border: 1px solid $colorMbFormFieldBorder;
+    color: $colorMbFontDark;
+    display: inline-block;
+    font-family: $fontFamily;
+    font-size: large;
+    padding: $spacingXxs $spacingMd;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: $breakpointMd) {
+  #about p {
+    margin-bottom: $spacingMd;
+  }
+
+  .cv a {
+    transition: all 0.1s linear;
+  }
+
+  .cv a:hover {
+    border-color: $colorMbTeal;
+    transform: scale(1.1);
+  }
+}
