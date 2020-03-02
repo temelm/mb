@@ -19,7 +19,7 @@ const paragraph2 = [
 ].join(' ')
 
 const About = () => (
-  <section id='about'>
+  <div id='about' className='section'>
     <div className='wrapper'>
       <h1>About</h1>
       <p>{paragraph1}</p>
@@ -28,7 +28,7 @@ const About = () => (
         <a href='cv.pdf' target='blank'>View CV</a>
       </div>
     </div>
-  </section>
+  </div>
 )
 
 export default About

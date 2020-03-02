@@ -1,15 +1,9 @@
 #welcome {
-  /*padding-bottom: $spacingMd;
-  padding-top: $spacingMd;*/
   text-align: center;
-
-  /*h1 {
-    font-size: $spacingMd;
-    margin: 0;
-  }*/
 
   img {
     max-width: $baseWidth;
+    width: 100%;
   }
 
   p {
@@ -19,17 +13,7 @@
 }
 
 @media screen and (min-width: $breakpointMd) {
-  #welcome {
-    margin-top: $navbarHeight;
-    /*padding-bottom: $spacingLg;
-    padding-top: $spacingLg;*/
-
-    /*h1 {
-      font-size: $spacingLg;
-    }*/
-
-    img {
-      max-width: calc(#{$baseWidth} * 1.25);
-    }
+  #welcome img {
+    max-width: calc(#{$baseWidth} * 1.25);
   }
 }

@@ -3,7 +3,7 @@ $breakpointMd: 768px;
 $navbarHeight: 51px;
 
 $spacingXxs: calc(#{$baseWidth} / 40);           /* 8px */
-$spacingXs: calc(#{$baseWidth} / 20);            /* 16px */
+$spacingXs: calc(#{$spacingXxs} * 2);            /* 16px */
 $spacingSm: calc(#{$spacingXs} * 2);             /* 32px */
 $spacingMd: calc(#{$spacingXs} + #{$spacingSm}); /* 48px */
 $spacingLg: calc(#{$spacingXs} * 4);             /* 64px */
