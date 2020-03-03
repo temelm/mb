@@ -1,4 +1,7 @@
 #welcome {
+  background-image: url(../images/welcome.png);
+  background-position: center center;
+  background-size: cover;
   /*padding-bottom: $spacingMd;
   padding-top: $spacingMd;*/
   text-align: center;
@@ -13,13 +16,20 @@
   }
 
   p {
+    color: #32788f;
+    font-style: italic;
     margin-bottom: 0;
-    margin-top: $spacingSm;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(#{$spacingSm} / 2);
+    max-width: $baseWidth;
+    text-align: right;
   }
 }
 
 @media screen and (min-width: $breakpointMd) {
   #welcome {
+    background-attachment: fixed;
     margin-top: $navbarHeight;
     /*padding-bottom: $spacingLg;
     padding-top: $spacingLg;*/

@@ -5,9 +5,7 @@ const Welcome = () => (
   <section id='welcome'>
     <div className='wrapper'>
       <img src={logo} alt='MB Accounting &amp; Consulting Ltd' />
-      <p>
-        <q>Accounting simplified.</q>
-      </p>
+      <p>Accounting simplified.</p>
     </div>
   </section>
 )

@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "GravityRegular";
+  src: url("../fonts/gravity-regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "TheBoldFont";
+  src: url("../fonts/theboldfont.ttf") format("truetype");
+}
+
 $baseWidth: 320px;
 $breakpointMd: 768px;
 $navbarHeight: 51px;
@@ -8,14 +17,14 @@ $spacingSm: calc(#{$spacingXs} * 2);             /* 32px */
 $spacingMd: calc(#{$spacingXs} + #{$spacingSm}); /* 48px */
 $spacingLg: calc(#{$spacingXs} * 4);             /* 64px */
 
-$colorMbBackgroundLight: #fffaf0;
+$colorMbBackgroundLight: #fff;
 $colorMbFontDark: #333;
 $colorMbFormFieldBorder: #ccc;
 $colorMbTeal: #185e75;
 $colorMbTealLight: #7ca4b1;
 $colorWhite: #fff;
 
-$fontFamily: "Ubuntu", sans-serif;
+$fontFamily: "GravityRegular", sans-serif;
 
 body {
   background-color: $colorMbBackgroundLight;
