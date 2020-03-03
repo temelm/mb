@@ -22,9 +22,8 @@ const Contact = (props) => {
           </div>
         </div>
         <div className='copyright'>
-          <span role='img' aria-label='Copyright'>©️</span>
-          {' '}
-          2019 MB Accounting &amp; Consulting Ltd
+          <span role='img' aria-label='Copyright'>©️&nbsp;</span>
+          2020 MB Accounting &amp; Consulting Ltd
         </div>
       </div>
     </section>
