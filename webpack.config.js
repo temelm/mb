@@ -34,6 +34,11 @@ module.exports = (env) => {
           test: /\.(gif|ico|jpe?g|png|svg)$/,
           exclude: /node_modules/,
           use: 'file-loader'
+        },
+        {
+          test: /\.(otf|ttf)$/,
+          exclude: /node_modules/,
+          use: 'file-loader'
         }
       ]
     },
