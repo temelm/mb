@@ -28,10 +28,44 @@ $fontFamily: "GravityRegular", sans-serif;
 
 body {
   background-color: $colorMbBackgroundLight;
+  background: url(../images/welcome.png) no-repeat center center fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: $colorMbFontDark;
   font-family: $fontFamily;
   margin: 0;
   min-width: $baseWidth;
+}
+
+#logo {
+  max-width: $baseWidth;
+}
+
+.linkedin {
+  color: #00a0dc;
+
+  &:link {
+    color: #00a0dc;
+  }
+
+  &:visited {
+    color: #00a0dc;
+  }
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #185e75;
+}
+
+h2 {
+  margin-top: $spacingLg;
 }
 
 .wrapper {

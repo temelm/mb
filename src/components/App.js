@@ -1,20 +1,16 @@
 import React from 'react'
-import Nav from './Nav'
-import Welcome from './Welcome'
-import About from './About'
-import Services from './Services'
-import Contact from './Contact'
-import Notification from './Notification'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import logo from '../images/logo.png'
 
 class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      hamburgerToggle: false,
-      contactFormSubmitDisabled: false,
-      displayNotification: false,
-      notificationType: '',
-      notificationMessage: ''
+      hamburgerToggle: false
+      // contactFormSubmitDisabled: false,
+      // displayNotification: false,
+      // notificationType: '',
+      // notificationMessage: ''
     }
     this.setHamburgerToggle = this.setHamburgerToggle.bind(this)
     this.setNotification = this.setNotification.bind(this)
@@ -29,11 +25,12 @@ class App extends React.Component {
     }))
   }
 
-  setNotification (display, type, message) {
+  // setNotification (display, type, message) {
+  setNotification () {
     this.setState({
-      displayNotification: (typeof display === 'boolean') ? display : false,
-      notificationType: type,
-      notificationMessage: message
+      // displayNotification: (typeof display === 'boolean') ? display : false,
+      // notificationType: type,
+      // notificationMessage: message
     })
   }
 
@@ -45,7 +42,7 @@ class App extends React.Component {
   handleContactFormSubmit (event) {
     event.preventDefault()
     this.setState({
-      contactFormSubmitDisabled: true
+      // contactFormSubmitDisabled: true
     })
     const contactForm = event.target
     const action = contactForm.getAttribute('action')
@@ -61,7 +58,7 @@ class App extends React.Component {
       }
       setTimeout(() => {
         this.setState({
-          contactFormSubmitDisabled: false
+          // contactFormSubmitDisabled: false
         })
       }, 1000)
       window.notificationTimeout = setTimeout(() => {
@@ -79,30 +76,13 @@ class App extends React.Component {
   }
 
   render () {
-    const {
-      hamburgerToggle, contactFormSubmitDisabled, displayNotification, notificationType, notificationMessage
-    } = this.state
     return (
-      <div id='app'>
-        <Nav
-          hamburgerToggle={hamburgerToggle}
-          setHamburgerToggle={this.setHamburgerToggle}
-          handleHamburgerToggle={this.handleHamburgerToggle}
-        />
-        <Welcome />
-        <About />
-        <Services />
-        <Contact
-          contactFormSubmitDisabled={contactFormSubmitDisabled}
-          handleContactFormSubmit={this.handleContactFormSubmit}
-        />
-        {displayNotification && (
-          <Notification
-            type={notificationType}
-            message={notificationMessage}
-            handleNotificationDismiss={this.handleNotificationDismiss}
-          />
-        )}
+      <div id='app' className='centered'>
+        <img src={logo} alt='MB Accounting &amp; Consulting Ltd' id='logo' />
+        <h2>Coming Soon</h2>
+        <a className='linkedin' href='//www.linkedin.com/in/mete-bagzibagli-57017627' target='blank' rel='noopener'>
+          <FontAwesomeIcon icon={['fab', 'linkedin-in']} fixedWidth size='lg' />
+        </a>
       </div>
     )
   }
